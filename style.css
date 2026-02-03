@@ -654,10 +654,105 @@ hr {
     .nav-menu li {
         margin: 15px 0;
     }
-    .hero { padding-top: 120px; }
-    h1 { font-size: 2.4rem; }
-    h2.section-title { font-size: 2rem; }
-    section { padding: 60px 0; }
+    .hero { 
+        padding-top: 100px; 
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+    .hero-text {
+        width: 100%;
+        padding: 0 10px;
+    }
+    .hero-text h1 {
+        font-size: 2.2rem !important; /* Важно для переопределения */
+        line-height: 1.2;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+    .hero-photo {
+        width: 100%;
+        max-width: 100% !important;
+        height: auto;
+        min-height: 300px;
+    }
+    section { 
+        padding: 50px 15px !important; /* Отступы для всех секций */
+    }
+
+        .calc-container {
+        grid-template-columns: 1fr !important;
+        gap: 30px !important;
+        padding: 25px 20px !important;
+        margin: 0 10px;
+        width: calc(100% - 20px);
+        box-sizing: border-box;
+    }
+    
+    .calc-form {
+        padding: 20px 15px !important;
+        overflow: hidden;
+    }
+    
+    .form-step {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    select, input[type="tel"], input[type="range"] {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .form-navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .btn, .btn-secondary {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+        .services-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px;
+        padding: 0 10px;
+    }
+    
+    .service-card {
+        margin: 0 5px;
+        padding: 25px 20px;
+    }
+    
+    .gallery {
+        min-height: 400px;
+        margin: 30px 15px;
+        width: calc(100% - 30px);
+    }
+    
+    .gallery-controls button {
+        width: 40px;
+        height: 40px;
+    }
+
+        .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+        padding: 0 15px;
+    }
+    
+    .footer {
+        padding: 50px 0 20px;
+    }
+    
+    .footer-col {
+        padding: 0 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -666,4 +761,41 @@ hr {
     .calc-container, .calc-form { padding: 25px; }
     .form-navigation { flex-direction: column; gap: 15px; }
     .form-navigation button { width: 100%; }
+
+    /* Исправление переполнения на очень маленьких экранах */
+@media (max-width: 480px) {
+    .container {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+    }
+    
+    h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.3;
+        padding: 0 5px;
+    }
+    
+    h2.section-title {
+        font-size: 1.7rem !important;
+        padding: 0 10px;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem !important;
+        padding: 0 10px;
+    }
+    
+    body {
+        overflow-x: hidden;
+        width: 100%;
+        position: relative;
+    }
+    
+    html {
+        overflow-x: hidden;
+    }
+}
 }
