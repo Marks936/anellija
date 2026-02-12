@@ -11,28 +11,46 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Nav -->
+    <!-- Navigācija -->
     <nav class="navbar">
         <div class="container nav-container">
             <a href="#" class="logo">ANELLIJA</a>
+            <div class="nav-controls">
+                <!-- Valodas pārslēdzējs -->
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="ru" aria-label="Русский">
+                        <img src="flags/ru.svg" alt="RU" />
+                    </button>
+                    <button class="lang-btn" data-lang="lv" aria-label="Latviešu">
+                        <img src="flags/lv.svg" alt="LV" />
+                    </button>
+                    <button class="lang-btn" data-lang="en" aria-label="English">
+                        <img src="flags/en.svg" alt="EN" />
+                    </button>
+                </div>
+                <!-- Tēmas pārslēgšana -->
+                <button class="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun" id="theme-icon"></i>
+                </button>
+            </div>
             <button class="menu-toggle" aria-label="Открыть меню"><i class="fas fa-bars"></i></button>
             <ul class="nav-menu">
-                <li><a href="#main">Главная</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#portfolio">Проекты</a></li>
-                <li><a href="#calculator">Расчёт</a></li>
-                <li><a href="#contact" class="cta-nav">Контакты</a></li>
+                <li><a href="#main" data-i18n="nav.home">Главная</a></li>
+                <li><a href="#services" data-i18n="nav.services">Услуги</a></li>
+                <li><a href="#portfolio" data-i18n="nav.portfolio">Проекты</a></li>
+                <li><a href="#calculator" data-i18n="nav.calculator">Расчёт</a></li>
+                <li><a href="#contact" class="cta-nav" data-i18n="nav.contacts">Контакты</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- hero -->
+    <!-- Galvenā sadaļa -->
     <section id="main" class="hero">
         <div class="container hero-container">
             <div class="hero-text fade-in-up">
-                <h1 class="title-animate"><span class="gradient-text">Надёжные заборы</span> и интеллектуальные ворота для вашего пространства</h1>
-                <p class="subtitle">Производство, установка и автоматика «под ключ». Гарантия 5 лет на все работы.</p>
-                <a href="#calculator" class="btn pulse">Рассчитать стоимость <i class="fas fa-arrow-right"></i></a>
+                <h1 class="title-animate"><span class="gradient-text" data-i18n="hero.title">Надёжные заборы</span> <span data-i18n="hero.title.highlight">и интеллектуальные ворота для вашего пространства</span></h1>
+                <p class="subtitle" data-i18n="hero.subtitle">Производство, установка и автоматика «под ключ». Гарантия 5 лет на все работы.</p>
+                <a href="#calculator" class="btn pulse"><span data-i18n="hero.cta">Рассчитать стоимость</span> <i class="fas fa-arrow-right"></i></a>
             </div>
             <div class="hero-image slide-in-right">
                 <img src="gallery/gates_1.png" 
@@ -42,95 +60,95 @@
         </div>
     </section>
 
-    <!-- serv -->
+    <!-- Pakalpojumi -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title scroll-animate">Что мы делаем</h2>
-            <p class="section-subtitle">Полный цикл работ — от проекта до установки и обслуживания.</p>
+            <h2 class="section-title scroll-animate" data-i18n="services.title">Что мы делаем</h2>
+            <p class="section-subtitle" data-i18n="services.subtitle">Полный цикл работ — от проекта до установки и обслуживания.</p>
             <div class="services-grid">
                 <div class="service-card hover-lift">
                     <div class="service-icon"><i class="fas fa-border-all"></i></div>
-                    <h3>Заборы</h3>
-                    <p>Из профлиста, евроштакетника, 3D-сетки, дерева, сварные и кованые.</p>
+                    <h3 data-i18n="services.fences.title">Заборы</h3>
+                    <p data-i18n="services.fences.desc">Из профлиста, евроштакетника, 3D-сетки, дерева, сварные и кованые.</p>
                 </div>
                 <div class="service-card hover-lift">
                     <div class="service-icon"><i class="fas fa-door-closed"></i></div>
-                    <h3>Ворота и калитки</h3>
-                    <p>Распашные, откатные, секционные. Любой сложности и дизайна.</p>
+                    <h3 data-i18n="services.gates.title">Ворота и калитки</h3>
+                    <p data-i18n="services.gates.desc">Распашные, откатные, секционные. Любой сложности и дизайна.</p>
                 </div>
                 <div class="service-card hover-lift">
                     <div class="service-icon"><i class="fas fa-robot"></i></div>
-                    <h3>Автоматика</h3>
-                    <p>Установка и настройка приводов, пультов, систем контроля доступа.</p>
+                    <h3 data-i18n="services.automation.title">Автоматика</h3>
+                    <p data-i18n="services.automation.desc">Установка и настройка приводов, пультов, систем контроля доступа.</p>
                 </div>
                 <div class="service-card hover-lift">
                     <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
-                    <h3>Монтаж «под ключ»</h3>
-                    <p>Собственная бригада мастеров с опытом более 10 лет. Чёткие сроки по договору.</p>
+                    <h3 data-i18n="services.installation.title">Монтаж «под ключ»</h3>
+                    <p data-i18n="services.installation.desc">Собственная бригада мастеров с опытом более 10 лет. Чёткие сроки по договору.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- gallery -->
+    <!-- Galerija -->
     <section id="portfolio" class="portfolio">
         <div class="container">
-            <h2 class="section-title scroll-animate">Наши работы</h2>
-            <p class="section-subtitle">Более 540 реализованных проектов с 2010 года.</p>
+            <h2 class="section-title scroll-animate" data-i18n="portfolio.title">Наши работы</h2>
+            <p class="section-subtitle" data-i18n="portfolio.subtitle">Более 540 реализованных проектов с 2010 года.</p>
             <div class="gallery">
                 <div class="gallery-controls">
-                    <button id="prevBtn" aria-label="Предыдущее фото"><i class="fas fa-chevron-left"></i></button>
-                    <button id="nextBtn" aria-label="Следующее фото"><i class="fas fa-chevron-right"></i></button>
+                    <button id="prevBtn" data-i18n-aria="portfolio.prev" aria-label="Предыдущее фото"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextBtn" data-i18n-aria="portfolio.next" aria-label="Следующее фото"><i class="fas fa-chevron-right"></i></button>
                 </div>
-                <div class="gallery-counter"><span id="currentImg">1</span> / <span id="totalImg">4</span></div>
+                <div class="gallery-counter"><span id="currentImg">1</span> / <span id="totalImg">5</span></div>
             </div>
         </div>
     </section>
 
-    <!-- calc -->
+    <!-- Kalkulators -->
     <section id="calculator" class="calculator">
         <div class="container">
             <div class="calc-container scroll-animate">
                 <div class="calc-text">
-                    <h2 class="section-title">Рассчитайте стоимость онлайн</h2>
-                    <p>Ответьте на 4 вопроса и получите предварительную смету.</p>
+                    <h2 class="section-title" data-i18n="calculator.title">Рассчитайте стоимость онлайн</h2>
+                    <p data-i18n="calculator.subtitle">Ответьте на 4 вопроса и получите предварительную смету.</p>
                     <ul class="benefits">
-                        <li><i class="fas fa-check-circle"></i> Гарантия точной цены — без скрытых платежей</li>
-                        <li><i class="fas fa-check-circle"></i> Выезд замерщика — бесплатно</li>
-                        <li><i class="fas fa-check-circle"></i> Скидка 10% при заказе с сайта</li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="calculator.benefit1">Гарантия точной цены — без скрытых платежей</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="calculator.benefit2">Выезд замерщика — бесплатно</span></li>
+                        <li><i class="fas fa-check-circle"></i> <span data-i18n="calculator.benefit3">Скидка 10% при заказе с сайта</span></li>
                     </ul>
                 </div>
                 <form id="costCalcForm" class="calc-form">
                     <div class="form-step active">
-                        <label for="fenceType">1. Выберите тип ограждения:</label>
+                        <label for="fenceType" data-i18n="calculator.step1.label">1. Выберите тип ограждения:</label>
                         <select id="fenceType" name="fenceType" required>
-                            <option value="">-- Выберите --</option>
-                            <option value="profiled">Забор из профлиста (от 2600 р/м²)</option>
-                            <option value="euro">Евроштакетник (от 3200 р/м²)</option>
-                            <option value="3d">3D-сетка (от 3200 р/м²)</option>
-                            <option value="wood">Деревянный (от 3400 р/м²)</option>
+                            <option value="" data-i18n="calculator.step1.placeholder">-- Выберите --</option>
+                            <option value="profiled" data-i18n="calculator.step1.profiled">Забор из профлиста (от 2600 р/м²)</option>
+                            <option value="euro" data-i18n="calculator.step1.euro">Евроштакетник (от 3200 р/м²)</option>
+                            <option value="3d" data-i18n="calculator.step1.3d">3D-сетка (от 3200 р/м²)</option>
+                            <option value="wood" data-i18n="calculator.step1.wood">Деревянный (от 3400 р/м²)</option>
                         </select>
                     </div>
                     <div class="form-step">
-                        <label>2. Нужны ли ворота/калитка?</label>
+                        <label data-i18n="calculator.step2.label">2. Нужны ли ворота/калитка?</label>
                         <div class="radio-group">
-                            <label><input type="radio" name="gate" value="yes" required> Да</label>
-                            <label><input type="radio" name="gate" value="no"> Нет</label>
+                            <label><input type="radio" name="gate" value="yes" required> <span data-i18n="calculator.step2.yes">Да</span></label>
+                            <label><input type="radio" name="gate" value="no"> <span data-i18n="calculator.step2.no">Нет</span></label>
                         </div>
                     </div>
                     <div class="form-step">
-                        <label for="length">3. Примерная длина (метры):</label>
+                        <label for="length" data-i18n="calculator.step3.label">3. Примерная длина (метры):</label>
                         <input type="range" id="length" name="length" min="10" max="100" value="30">
                         <output for="length" id="lengthValue">30 м</output>
                     </div>
                     <div class="form-step">
-                        <label for="phone">4. Ваш телефон для расчёта:</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67" required>
+                        <label for="phone" data-i18n="calculator.step4.label">4. Ваш телефон для расчёта:</label>
+                        <input type="tel" id="phone" name="phone" data-i18n-placeholder="calculator.step4.placeholder" placeholder="+7 (999) 123-45-67" required>
                     </div>
                     <div class="form-navigation">
-                        <button type="button" id="prevStep" class="btn-secondary">Назад</button>
-                        <button type="button" id="nextStep" class="btn">Далее</button>
-                        <button type="submit" id="submitForm" class="btn" style="display:none;">Получить расчёт</button>
+                        <button type="button" id="prevStep" class="btn-secondary" data-i18n="calculator.btn.prev">Назад</button>
+                        <button type="button" id="nextStep" class="btn" data-i18n="calculator.btn.next">Далее</button>
+                        <button type="submit" id="submitForm" class="btn" data-i18n="calculator.btn.submit" style="display:none;">Получить расчёт</button>
                     </div>
                     <div id="formResult"></div>
                 </form>
@@ -138,13 +156,13 @@
         </div>
     </section>
 
-    <!-- contacts, footer -->
+    <!-- Kontakti, kājene -->
     <footer id="contact" class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col">
                     <h3>ANELLIJA</h3>
-                    <p>Изготовление и установка заборов, ворот, калиток и автоматики. Качество и надёжность с 2010 года.</p>
+                    <p data-i18n="footer.description">Изготовление и установка заборов, ворот, калиток и автоматики. Качество и надёжность с 2010 года.</p>
                     <div class="social">
                         <a href="#" aria-label="ВКонтакте"><i class="fab fa-vk"></i></a>
                         <a href="#" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
@@ -152,27 +170,30 @@
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Контакты</h4>
+                    <h4 data-i18n="footer.contacts.title">Контакты</h4>
                     <p><i class="fas fa-phone"></i> <a href="tel:+371 27 801 801">+371 27 801 801</a></p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:anellija2@inbox.lv">anellija2@inbox.lv</a></p>
                     <p><i class="fas fa-map-marker-alt"></i>Radiostacijas iela 21, Riga</p>
-                    <p><i class="fas fa-clock"></i> Пн-Сб: 9:00 - 17:00</p>
+                    <p><i class="fas fa-clock"></i> <span data-i18n="footer.schedule">Пн-Сб: 9:00 - 17:00</span></p>
                 </div>
                 <div class="footer-col">
-                    <h4>Быстрые ссылки</h4>
+                    <h4 data-i18n="footer.links.title">Быстрые ссылки</h4>
                     <ul>
-                        <li><a href="#services">Услуги</a></li>
-                        <li><a href="#portfolio">Наши работы</a></li>
-                        <li><a href="#calculator">Калькулятор</a></li>
-                        <li><a href="#contact">Контакты</a></li>
+                        <li><a href="#services" data-i18n="footer.link.services">Услуги</a></li>
+                        <li><a href="#portfolio" data-i18n="footer.link.portfolio">Наши работы</a></li>
+                        <li><a href="#calculator" data-i18n="footer.link.calculator">Калькулятор</a></li>
+                        <li><a href="#contact" data-i18n="footer.link.contacts">Контакты</a></li>
                     </ul>
                 </div>
             </div>
             <hr>
-            <p class="copyright">© 2026 Anellija. Все права защищены.</p>
+            <p class="copyright" data-i18n="footer.copyright">© 2026 Anellija. Все права защищены.</p>
         </div>
     </footer>
 
+    <script src="translations.js"></script>
+    <script src="theme.js"></script>
+    <script src="animations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

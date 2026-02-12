@@ -1,4 +1,10 @@
-// === mobile ===
+// === Inicializēt tulkošanas pārvaldnieku ===
+const translationManager = new TranslationManager();
+
+// === Inicializēt tēmas pārvaldnieku ===
+const themeManager = new ThemeManager();
+
+// === Mobilā izvēlne ===
 const menuToggle = document.querySelector('.menu-toggle');
 const navMenu = document.querySelector('.nav-menu');
 
@@ -14,6 +20,19 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
         navMenu.classList.remove('active');
         menuToggle.innerHTML = '<i class="fas fa-bars"></i>';
     });
+});
+
+// === Valodas pārslēdzēja notikumu klausītāji ===
+document.querySelectorAll('.lang-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        translationManager.setLanguage(lang);
+    });
+});
+
+// === Tēmas pārslēgšanas notikumu klausītājs ===
+document.querySelector('.theme-toggle').addEventListener('click', () => {
+    themeManager.toggleTheme();
 });
 
 const observerOptions = {
@@ -32,7 +51,7 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.scroll-animate').forEach(el => observer.observe(el));
 
-// === gallery ===
+// === Galerija ===
 const galleryImages = [
     'gallery/gates_1.png',
     'gallery/gates_2.png',
@@ -41,42 +60,25 @@ const galleryImages = [
     'gallery/door_1.png',
 ];
 
-let currentIndex = 0;
-const totalImgEl = document.getElementById('totalImg');
-const currentImgEl = document.getElementById('currentImg');
 const galleryEl = document.querySelector('.gallery');
+const totalImgEl = document.getElementById('totalImg');
+const animationController = new AnimationController(galleryEl, galleryImages);
 
 totalImgEl.textContent = galleryImages.length;
 
-// gallery-update
-function updateGalleryImage() {
-    galleryEl.style.background = `url('${galleryImages[currentIndex]}') center/cover no-repeat`;
-    currentImgEl.textContent = currentIndex + 1;
-    galleryEl.innerHTML = '';
-    const controls = document.createElement('div');
-    controls.className = 'gallery-controls';
-    controls.innerHTML = `
-        <button id="prevBtn" aria-label="Предыдущее фото"><i class="fas fa-chevron-left"></i></button>
-        <button id="nextBtn" aria-label="Следующее фото"><i class="fas fa-chevron-right"></i></button>
-    `;
-    galleryEl.appendChild(controls);
-    attachGalleryEvents();
-}
+// Inicializēt galeriju
+animationController.init();
 
-function attachGalleryEvents() {
-    document.getElementById('nextBtn').addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % galleryImages.length;
-        updateGalleryImage();
-    });
-    document.getElementById('prevBtn').addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
-        updateGalleryImage();
-    });
-}
+// Pievienot notikumu klausītājus galerijas vadīklām
+document.getElementById('nextBtn').addEventListener('click', () => {
+    animationController.next();
+});
 
-updateGalleryImage();
+document.getElementById('prevBtn').addEventListener('click', () => {
+    animationController.previous();
+});
 
-// === calc ===
+// === Kalkulators ===
 const formSteps = document.querySelectorAll('.form-step');
 const nextBtn = document.getElementById('nextStep');
 const prevBtn = document.getElementById('prevStep');
@@ -122,10 +124,11 @@ prevBtn.addEventListener('click', (e) => {
 });
 
 lengthSlider.addEventListener('input', () => {
-    lengthOutput.textContent = `${lengthSlider.value} м`;
+    const unit = translationManager.translate('calculator.unit.meters');
+    lengthOutput.textContent = `${lengthSlider.value} ${unit}`;
 });
 
-// cost calc
+// Izmaksu aprēķins
 const priceMap = {
     profiled: 2600,
     euro: 3200,
@@ -141,22 +144,34 @@ form.addEventListener('submit', (e) => {
     const phone = document.getElementById('phone').value;
 
     if (!fenceType || !phone) {
-        alert('Пожалуйста, заполните все обязательные поля.');
+        alert(translationManager.translate('calculator.alert.fill'));
         return;
     }
 
     let basePrice = priceMap[fenceType] || 3000;
     let total = basePrice * length;
-    if (hasGate) total += 20000; // plus gate cost
+    if (hasGate) total += 20000; // pievienot vārtu izmaksas
 
     const resultEl = document.getElementById('formResult');
+    const title = translationManager.translate('calculator.result.title');
+    const costLabel = translationManager.translate('calculator.result.cost');
+    const contact = translationManager.translate('calculator.result.contact');
+    const time = translationManager.translate('calculator.result.time');
+    const currency = translationManager.translate('calculator.currency');
+    
     resultEl.innerHTML = `
-        <strong>Предварительный расчёт готов!</strong><br>
-        Примерная стоимость: <strong>${total.toLocaleString('ru-RU')} руб.</strong><br>
-        Наш менеджер свяжется с вами по номеру <strong>${phone}</strong> в течение 15 минут для уточнения деталей.
+        <strong>${title}</strong><br>
+        ${costLabel} <strong>${total.toLocaleString('ru-RU')} ${currency}</strong><br>
+        ${contact} <strong>${phone}</strong> ${time}
     `;
     resultEl.style.display = 'block';
     resultEl.scrollIntoView({ behavior: 'smooth' });
 });
 
 showStep(0);
+
+// === Inicializēt visus moduļus lapas ielādē ===
+document.addEventListener('DOMContentLoaded', () => {
+    translationManager.init();
+    themeManager.init();
+});

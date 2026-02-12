@@ -1,4 +1,4 @@
-/* ===== basic styles ===== */
+/* ===== pamata stili ===== */
 :root {
     --primary: #2563eb;      
     --primary-dark: #1d4ed8;
@@ -11,6 +11,34 @@
     --shadow-hover: 0 20px 40px -10px rgba(37, 99, 235, 0.25);
     --radius: 12px;
     --transition: all 0.3s ease;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f9fafb;
+    --text-primary: #1f2937;
+    --text-secondary: #6b7280;
+    --card-bg: #ffffff;
+    --card-border: #f3f4f6;
+    --nav-bg: rgba(255, 255, 255, 0.95);
+    --footer-bg: #1f2937;
+}
+
+/* Tumšās tēmas krāsas */
+body.dark-theme {
+    --primary: #3b82f6;
+    --primary-dark: #2563eb;
+    --secondary: #10b981;
+    --dark: #f9fafb;
+    --light: #1f2937;
+    --gray: #9ca3af;
+    --bg-primary: #111827;
+    --bg-secondary: #1f2937;
+    --text-primary: #f9fafb;
+    --text-secondary: #d1d5db;
+    --card-bg: #1f2937;
+    --card-border: #374151;
+    --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+    --shadow-hover: 0 20px 40px -10px rgba(59, 130, 246, 0.3);
+    --nav-bg: rgba(31, 41, 55, 0.95);
+    --footer-bg: #0f172a;
 }
 
 * {
@@ -26,9 +54,10 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    color: var(--dark);
-    background-color: #ffffff;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
     overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -42,7 +71,7 @@ section {
     padding: 80px 0;
 }
 
-/* ===== text ===== */
+/* ===== teksts ===== */
 h1, h2, h3, h4 {
     font-weight: 700;
     line-height: 1.2;
@@ -89,12 +118,12 @@ h2.section-title::after {
     font-weight: 800;
 }
 
-/* ===== nav ===== */
+/* ===== navigācija ===== */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
+    background-color: var(--nav-bg);
     backdrop-filter: blur(10px);
     z-index: 1000;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -106,13 +135,80 @@ h2.section-title::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto;
+}
+
+/* Valodas pārslēdzējs */
+.language-switcher {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.lang-btn {
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 6px;
+    padding: 4px;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-btn img {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.lang-btn:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.lang-btn.active {
+    border-color: var(--primary);
+    background: rgba(37, 99, 235, 0.1);
+}
+
+/* Tēmas pārslēgšana */
+.theme-toggle {
+    background: none;
+    border: 2px solid var(--card-border);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-primary);
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px) rotate(20deg);
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.theme-toggle i {
+    font-size: 18px;
 }
 
 .logo {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     font-weight: 800;
-    color: var(--dark);
     text-decoration: none;
     background: var(--gradient);
     -webkit-background-clip: text;
@@ -131,7 +227,7 @@ h2.section-title::after {
 
 .nav-menu a {
     text-decoration: none;
-    color: var(--dark);
+    color: var(--text-primary);
     font-weight: 500;
     transition: var(--transition);
     position: relative;
@@ -179,11 +275,11 @@ h2.section-title::after {
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: var(--dark);
+    color: var(--text-primary);
     cursor: pointer;
 }
 
-/* ===== main screen ===== */
+/* ===== galvenais ekrāns ===== */
 .hero {
     padding-top: 140px;
     overflow: hidden;
@@ -207,7 +303,7 @@ h2.section-title::after {
 
 .subtitle {
     font-size: 1.2rem;
-    color: var(--gray);
+    color: var(--text-secondary);
     margin-bottom: 2.5rem;
     max-width: 600px;
 }
@@ -228,7 +324,7 @@ h2.section-title::after {
     border: 1px solid #e5e7eb;
 }
 
-/* ===== buttons ===== */
+/* ===== pogas ===== */
 .btn, .btn-secondary {
     display: inline-flex;
     align-items: center;
@@ -275,7 +371,7 @@ h2.section-title::after {
     100% { box-shadow: 0 0 0 0 rgba(37, 99, 235, 0); }
 }
 
-/* ===== services ===== */
+/* ===== pakalpojumi ===== */
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -284,13 +380,13 @@ h2.section-title::after {
 }
 
 .service-card {
-    background: white;
+    background: var(--card-bg);
     padding: 30px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     text-align: center;
     transition: var(--transition);
-    border: 1px solid #f3f4f6;
+    border: 1px solid var(--card-border);
 }
 
 .service-card:hover {
@@ -312,7 +408,7 @@ h2.section-title::after {
     margin-bottom: 1rem;
 }
 
-/* ===== gallery ===== */
+/* ===== galerija ===== */
 .gallery {
     position: relative;
     max-width: 900px;
@@ -320,11 +416,16 @@ h2.section-title::after {
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: var(--shadow);
-    background: #f8fafc;
+    background: var(--bg-secondary);
     min-height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+.gallery.animating {
+    pointer-events: none;
 }
 
 .gallery-controls {
@@ -339,7 +440,7 @@ h2.section-title::after {
 }
 
 .gallery-controls button {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     border: none;
     width: 50px;
     height: 50px;
@@ -356,15 +457,16 @@ h2.section-title::after {
 .gallery-controls button:hover {
     background: white;
     box-shadow: var(--shadow);
+    transform: scale(1.1);
 }
 
-/* ===== calc ===== */
+/* ===== kalkulators ===== */
 .calc-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-    background: white;
+    background: var(--card-bg);
     padding: 50px;
     border-radius: var(--radius);
     box-shadow: var(--shadow);
@@ -401,7 +503,7 @@ h2.section-title::after {
 }
 
 .calc-form {
-    background: #f8fafc;
+    background: var(--bg-secondary);
     padding: 30px;
     border-radius: var(--radius);
 }
@@ -425,17 +527,19 @@ label {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: var(--dark);
+    color: var(--text-primary);
 }
 
 select, input[type="tel"], input[type="range"] {
     width: 100%;
     padding: 15px;
-    border: 2px solid #e5e7eb;
+    border: 2px solid var(--card-border);
     border-radius: 10px;
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     transition: var(--transition);
+    background: var(--card-bg);
+    color: var(--text-primary);
 }
 
 select:focus, input[type="tel"]:focus {
@@ -484,9 +588,9 @@ output {
     display: none;
 }
 
-/* ===== footer ===== */
+/* ===== kājene ===== */
 .footer {
-    background: var(--dark);
+    background: var(--footer-bg);
     color: white;
     padding: 70px 0 30px;
 }
@@ -581,7 +685,7 @@ hr {
     font-size: 0.9rem;
 }
 
-/* ===== animation ===== */
+/* ===== animācijas ===== */
 .fade-in-up {
     opacity: 0;
     transform: translateY(30px);
@@ -623,7 +727,7 @@ hr {
     transition: var(--transition);
 }
 
-/* ===== adapt ===== */
+/* ===== adaptīvais dizains ===== */
 @media (max-width: 992px) {
     h1 { font-size: 2.8rem; }
     h2.section-title { font-size: 2.2rem; }
@@ -634,12 +738,41 @@ hr {
 
 @media (max-width: 768px) {
     .menu-toggle { display: block; }
+    
+    .nav-controls {
+        order: -1;
+        margin-left: 0;
+        margin-right: auto;
+    }
+    
+    .language-switcher {
+        gap: 6px;
+    }
+    
+    .lang-btn {
+        padding: 3px;
+    }
+    
+    .lang-btn img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .theme-toggle i {
+        font-size: 16px;
+    }
+    
     .nav-menu {
         position: fixed;
         top: 70px;
         left: 0;
         width: 100%;
-        background: white;
+        background: var(--nav-bg);
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
@@ -658,6 +791,7 @@ hr {
         padding-top: 100px; 
         padding-left: 15px;
         padding-right: 15px;
+        padding-bottom: 40px;
     }
     .hero-container {
         flex-direction: column;
@@ -669,10 +803,17 @@ hr {
         padding: 0 10px;
     }
     .hero-text h1 {
-        font-size: 2.2rem !important; /* Важно для переопределения */
-        line-height: 1.2;
+        font-size: 1.8rem !important;
+        line-height: 1.4;
         word-wrap: break-word;
         overflow-wrap: break-word;
+        white-space: normal;
+        margin-bottom: 1.5rem;
+    }
+    .hero-text .subtitle {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 2rem;
     }
     .hero-photo {
         width: 100%;
@@ -756,13 +897,42 @@ hr {
 }
 
 @media (max-width: 480px) {
-    h1 { font-size: 2rem; }
-    .btn, .btn-secondary { padding: 14px 24px; width: 100%; }
-    .calc-container, .calc-form { padding: 25px; }
-    .form-navigation { flex-direction: column; gap: 15px; }
-    .form-navigation button { width: 100%; }
+    h1 { 
+        font-size: 1.6rem !important;
+        line-height: 1.4 !important;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.5rem !important;
+        line-height: 1.4 !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero-text .subtitle {
+        font-size: 0.95rem !important;
+        line-height: 1.5 !important;
+    }
+    
+    .btn, .btn-secondary { 
+        padding: 14px 24px; 
+        width: 100%;
+        font-size: 0.95rem;
+    }
+    
+    .calc-container, .calc-form { 
+        padding: 25px; 
+    }
+    
+    .form-navigation { 
+        flex-direction: column; 
+        gap: 15px; 
+    }
+    
+    .form-navigation button { 
+        width: 100%; 
+    }
 
-    /* Исправление переполнения на очень маленьких экранах */
+    /* Labojums pārpildei ļoti mazos ekrānos */
 @media (max-width: 480px) {
     .container {
         padding-left: 15px !important;
