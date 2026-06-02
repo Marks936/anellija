@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Anellija | Vārti un žogi Rīgā - Profesionāli risinājumi</title>
+    <meta name="description" content="Profesionāli žogi un vārti Rīgā. Pašu ražošana, 5 gadu garantija, uzstādīšana 2 dienās. Bezmaksas izmērīšana. 500+ projektu.">
+    <meta name="keywords" content="žogi Rīgā, vārti Rīgā, automātiskie vārti, bīdāmie vārti, 3D sieta žogs, eiropaneļu žogs, CAME automātika">
+    <meta name="author" content="Anellija">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta property="og:title" content="Anellija - Profesionāli žogi un vārti Rīgā">
+    <meta property="og:description" content="5 gadu garantija, uzstādīšana 2 dienās. Bezmaksas izmērīšana.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://anellija.lv">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=1200&h=630&fit=crop">
+    <link rel="canonical" href="https://anellija.lv">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+    <!-- Font Awesome & Google Fonts -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Anellija",
+        "image": "https://images.unsplash.com/photo-1580273916550-e323be2ae537",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Radiostacijas iela 21",
+            "addressLocality": "Rīga",
+            "addressCountry": "LV",
+            "postalCode": "LV-1082"
+        },
+        "telephone": "+37127801801",
+        "priceRange": "€€",
+        "openingHours": ["Mo-Fr 09:00-20:00", "Sa 10:00-18:00"],
+        "sameAs": [
+            "https://facebook.com/anellija",
+            "https://instagram.com/anellija"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div class="loader" id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Cookie Consent -->
+    <div id="cookieConsent" class="cookie-consent">
+        <div class="cookie-content">
+            <i class="fas fa-cookie-bite"></i>
+            <p data-i18n="cookie.text">Mēs izmantojam sīkfailus, lai uzlabotu jūsu pieredzi. Turpinot lietot vietni, jūs piekrītat sīkfailu izmantošanai.</p>
+            <button id="acceptCookies" class="btn-cookie" data-i18n="cookie.accept">Piekrist</button>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/37127801801" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a class="logo" href="#main">ANELLIJA</a>
+            <div class="nav-right">
+                <div class="language-switcher">
+                    <button class="lang-btn" data-lang="lv">LV</button>
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Theme toggle">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#main" data-i18n="nav.home">Sākums</a></li>
+                    <li><a href="#services" data-i18n="nav.services">Pakalpojumi</a></li>
+                    <li><a href="#steps" data-i18n="nav.steps">Soļi</a></li>
+                    <li><a href="#portfolio" data-i18n="nav.portfolio">Projekti</a></li>
+                    <li><a href="#testimonials" data-i18n="nav.testimonials">Atsauksmes</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Kontakti</a></li>
+                    <li><a href="tel:+37127801801" class="nav-cta"><i class="fas fa-phone-alt"></i> <span data-i18n="hero.cta">Zvanīt</span></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="main" class="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content">
+                        <div class="hero-badge">
+                            <span class="badge-line"></span>
+                            <span data-i18n="hero.badge">Kopš 2012. gada Latvijā</span>
+                        </div>
+                        <h1 class="hero-title">
+                            <span class="gradient-text" data-i18n="hero.title">Uzticami žogi</span>
+                            <span class="hero-title-highlight" data-i18n="hero.title.highlight">un vārti Latvija</span>
+                        </h1>
+                        <p class="hero-subtitle" data-i18n="hero.subtitle">Pašu ražošana. 2 gadu garantija. Ātra uzstādīšana.</p>
+                        <div class="hero-buttons">
+                            <a href="tel:+37127801801" class="btn btn-primary">
+                                <span data-i18n="hero.cta">Zvanīt</span>
+                                <i class="fas fa-phone-alt"></i>
+                            </a>
+                            <a href="#portfolio" class="btn btn-outline">
+                                <span data-i18n="hero.portfolio">Mūsu darbi</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#contact" class="btn btn-outline">
+                                <span data-i18n="hero.consultation">Bezmaksas konsultācija</span>
+                                <i class="fas fa-calendar-alt"></i>
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <div class="stat-number">1500+</div>
+                                <div class="stat-label" data-i18n="hero.stat1">projektu</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">2</div>
+                                <div class="stat-label" data-i18n="hero.stat2">gadu garantija</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label" data-i18n="hero.stat3">atbalsts</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-visual">
+                        <div class="floating-gallery">
+                            <div class="float-card card-1">
+                                <img src="images/metal/varti_2.jpg" alt="Bīdāmie vārti" loading="lazy">
+                                <div class="card-badge"><i class="fas fa-shield-alt"></i><span>Mētāls</span></div>
+                            </div>
+                            <div class="float-card card-2">
+                                <img src="images/metal/vartini_1.jpg" alt="Eiropaneļu žogs" loading="lazy">
+                                <div class="card-badge"><i class="fas fa-bolt"></i><span>Kvalitātīvi</span></div>
+                            </div>
+                            <div class="float-card card-3">
+                                <img src="images/wood/varti_1.jpg" alt="3D sieta žogs" loading="lazy">
+                                <div class="card-badge"><i class="fas fa-ruler-combined"></i><span>Koks</span></div>
+                            </div>
+                            <div class="float-card card-4">
+                                <img src="images/etc/garazu_varti_1.jpg" alt="Automātika" loading="lazy">
+                                <div class="card-badge"><i class="fas fa-microchip"></i><span>BFT Automātika</span></div>
+                            </div>
+                            <div class="float-card card-5">
+                                <img src="images/wood/seta_1.jpg" alt="Koka žogs" loading="lazy">
+                                <div class="card-badge"><i class="fas fa-palette"></i><span>Jebkura krāsa</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-bg">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+            </div>
+        </section>
+
+        <!-- Steps Section -->
+        <section id="steps" class="steps">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="steps.subtitle">Process</span>
+                    <h2 class="section-title" data-i18n="steps.title">Kā mēs strādājam</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="steps-grid">
+                    <div class="step-card">
+                        <div class="step-number">01</div>
+                        <div class="step-icon"><i class="fas fa-ruler-combined"></i></div>
+                        <h3 data-i18n="steps.1.t">Izmērīšana</h3>
+                        <p data-i18n="steps.1.d">Bezmaksas speciālista izbraukums</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">02</div>
+                        <div class="step-icon"><i class="fas fa-file-signature"></i></div>
+                        <h3 data-i18n="steps.2.t">Līgums</h3>
+                        <p data-i18n="steps.2.d">Fiksējam cenu un termiņus</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">03</div>
+                        <div class="step-icon"><i class="fas fa-tools"></i></div>
+                        <h3 data-i18n="steps.3.t">Montāža</h3>
+                        <p data-i18n="steps.3.d">Profesionāļu komandas uzstādīšana</p>
+                    </div>
+                    <div class="step-card">
+                        <div class="step-number">04</div>
+                        <div class="step-icon"><i class="fas fa-check-circle"></i></div>
+                        <h3 data-i18n="steps.4.t">Nodošana</h3>
+                        <p data-i18n="steps.4.d">Kvalitātes kontrole un garantija</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="services.subtitle">Mūsu piedāvājumi</span>
+                    <h2 class="section-title" data-i18n="services.title">Pakalpojumi</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-border-all"></i></div>
+                        <h3 data-i18n="services.fences.title">Žogi</h3>
+                        <p data-i18n="services.fences.desc">Nerusējošs mētāls, 3D sēta, koks, pēc pasūtījuma</p>
+                        <div class="service-features">
+                            <span>Nerusējošs mētāls</span><span>3D sēta</span><span>Koks</span>
+                        </div>
+                        <a href="#" class="service-link"><span data-i18n="services.link">Uzzināt vairāk</span><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-door-open"></i></div>
+                        <h3 data-i18n="services.gates.title">Vārti</h3>
+                        <p data-i18n="services.gates.desc">Bīdāmie, veramie un sekciju sistēmas</p>
+                        <div class="service-features">
+                            <span>Bīdāmie</span><span>Veramie</span><span>Sekciju</span>
+                        </div>
+                        <a href="#" class="service-link"><span data-i18n="services.link">Uzzināt vairāk</span><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-microchip"></i></div>
+                        <h3 data-i18n="services.automation.title">Automātika</h3>
+                        <p data-i18n="services.automation.desc">Nice, CAME un BFT sistēmas ar garantiju</p>
+                        <div class="service-features">
+                            <span>Nice</span><span>CAME</span><span>BFT</span>
+                        </div>
+                        <a href="#" class="service-link"><span data-i18n="services.link">Uzzināt vairāk</span><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fas fa-headset"></i></div>
+                        <h3 data-i18n="services.installation.title">Serviss</h3>
+                        <p data-i18n="services.installation.desc">Esošo vārtu remonts un apkope</p>
+                        <div class="service-features">
+                            <span>Remonts</span><span>Apkope</span><span>Regulēšana</span>
+                        </div>
+                        <a href="#" class="service-link"><span data-i18n="services.link">Uzzināt vairāk</span><i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Gallery -->
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="portfolio.subtitle">Portfelis</span>
+                    <h2 class="section-title" data-i18n="portfolio.title">Mūsu darbi</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">Visi</button>
+                    <button class="filter-btn" data-filter="gates">Vārti</button>
+                    <button class="filter-btn" data-filter="fences">Žogi</button>
+                    <button class="filter-btn" data-filter="automation">Automātika</button>
+                </div>
+                <div class="portfolio-gallery" id="portfolioGallery">
+                    <div class="gallery-item" data-category="gates">
+                        <img src="images/metal/varti_2.jpg" alt="Bīdāmie vārti" loading="lazy">
+                        <div class="overlay"><span>Ekskluzīvie mētāla vārti</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="gates">
+                        <img src="images/metal/varti_3.jpg" alt="Eiropaneļu žogs" loading="lazy">
+                        <div class="overlay"><span>Bīdāmie vārti ar automātiku</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="gates">
+                        <img src="images/metal/vartini_1.jpg" alt="3D sieta žogs" loading="lazy">
+                        <div class="overlay"><span>Mētāla vārtiņi pēc pasūtījuma</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="fences">
+                        <img src="images/wood/seta_1.jpg" alt="Koka žogs" loading="lazy">
+                        <div class="overlay"><span>Koka žogs</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="automation">
+                        <img src="images/etc/garazu_varti_1.jpg" alt="Automātiskie vārti" loading="lazy">
+                        <div class="overlay"><span>Automātika BFT</span></div>
+                    </div>
+                    <div class="gallery-item" data-category="gates">
+                        <img src="images/metal/varti_4.jpg" alt="Automātika CAME" loading="lazy">
+                        <div class="overlay"><span>Automātiskie vārti</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="testimonials.subtitle">Atsauksmes</span>
+                    <h2 class="section-title" data-i18n="testimonials.title">Ko saka mūsu klienti</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p data-i18n="testimonial.1.text">"Lielisks serviss! Vārti uzstādīti 2 dienās, kvalitāte augstā līmenī. Ļoti iesaku!"</p>
+                        <div class="client-info">
+                            <strong>Jānis B.</strong>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p data-i18n="testimonial.2.text">"Profesionāla komanda, skaidra komunikācija. Žogs izskatās lieliski jau 3 gadus."</p>
+                        <div class="client-info">
+                            <strong>Ilze K.</strong>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <i class="fas fa-quote-left"></i>
+                        <p data-i18n="testimonial.3.text">"Ātri, kvalitatīvi un par normālu cenu. Paldies par automātikas ierīkošanu!"</p>
+                        <div class="client-info">
+                            <strong>Māris L.</strong>
+                            <div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" data-i18n="faq.subtitle">BUJ</span>
+                    <h2 class="section-title" data-i18n="faq.title">Biežāk uzdotie jautājumi</h2>
+                    <div class="section-line"></div>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 data-i18n="faq.1.q">Cik ilgs laiks nepieciešams žoga uzstādīšanai?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.1.a">Standarta žoga uzstādīšana aizņem 1-3 dienas atkarībā no objekta sarežģītības un laikapstākļiem. (plus laiks uz rāžošanu)</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 data-i18n="faq.2.q">Vai sniedzat garantiju saviem darbiem?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.2.a">Jā, mēs sniedzam 2 gadu garantiju visiem mūsu uzstādītajiem žogiem un vārtiem.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 data-i18n="faq.3.q">Vai izmērīšana ir bezmaksas?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.3.a">Jā, speciālista izbraukums un izmērīšana ir pilnīgi bezmaksas.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3 data-i18n="faq.4.q">Kādus automātikas zīmolus izmantojat?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p data-i18n="faq.4.a">Mēs strādājam ar vadošajiem zīmoliem - Nice, CAME un BFT.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section with Map -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h3 data-i18n="cta.title">Nepieciešams profesionāls žogs?</h3>
+                        <p data-i18n="cta.desc">Piesakieties bezmaksas izmērīšanai un saņemiet aprēķinu</p>
+                        <form id="contactForm" class="contact-form">
+                            <input type="text" id="contactName" placeholder="Jūsu vārds" required>
+                            <input type="email" id="contactEmail" placeholder="E-pasts" required>
+                            <input type="tel" id="contactPhone" placeholder="Tālrunis">
+                            <textarea id="contactMessage" rows="4" placeholder="Jautājums vai piezīme"></textarea>
+                            <button type="submit" class="btn btn-primary">Nosūtīt pieprasījumu</button>
+                        </form>
+                        <div id="formStatus" class="form-status"></div>
+                        <div class="contact-buttons">
+                            <a href="tel:+37127801801" class="btn btn-outline-light">
+                                <i class="fas fa-phone-alt"></i> +371 27 801 801
+                            </a>
+                            <a href="mailto:anellija2@inbox.lv" class="btn btn-outline-light">
+                                <i class="fas fa-envelope"></i> anellija2@inbox.lv
+                            </a>
+                        </div>
+                    </div>
+                    <div class="map-card">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=Radiostacijas+iela+21+Riga+Latvia&z=15&output=embed"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 400px;"
+                            allowfullscreen="" 
+                            loading="lazy"
+                            title="Anellija atrašanās vieta">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a class="logo" href="#main">ANELLIJA</a>
+                    <p data-i18n="footer.description">Uzticami žogi Latvijā kopš 2012. gada. Individuāla pieeja, Eiropas standarti.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-contacts">
+                    <h4 data-i18n="footer.contacts.title">Kontakti</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i><span>Radiostacijas iela 21, Rīga, LV-1082</span></li>
+                        <li><i class="fas fa-phone-alt"></i><a href="tel:+37127801801">+371 27 801 801</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:anellija2@inbox.lv">anellija2@inbox.lv</a></li>
+                    </ul>
+                </div>
+                <div class="footer-hours">
+                    <h4 data-i18n="footer.hours.title">Darba laiks</h4>
+                    <ul>
+                        <li><span data-i18n="footer.hours.weekdays">P-Pk:</span> 9:00 - 20:00</li>
+                        <li><span data-i18n="footer.hours.saturday">S:</span> 10:00 - 18:00</li>
+                        <li><span data-i18n="footer.hours.sunday">Sv:</span> <span data-i18n="footer.hours.sunday.value">pēc pieraksta</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Anellija. <span data-i18n="footer.rights">Visas tiesības aizsargātas</span></p>
+                <div class="footer-links">
+                    <a href="#" data-i18n="footer.privacy">Privātuma politika</a>
+                    <a href="#" data-i18n="footer.terms">Lietošanas noteikumi</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
