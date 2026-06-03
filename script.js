@@ -1,15 +1,16 @@
 // ==================== COMPLETE TRANSLATIONS (Latvian as base) ====================
 const translations = {
     lv: {
+        // Navigation
         'nav.home': 'Sākums',
         'nav.services': 'Pakalpojumi',
         'nav.steps': 'Soļi',
         'nav.portfolio': 'Projekti',
-        'nav.testimonials': 'Atsauksmes',
         'nav.contact': 'Kontakti',
+        // Hero section
         'hero.badge': 'Kopš 2012. gada Latvijā',
         'hero.title': 'Uzticami žogi',
-        'hero.title.highlight': 'un vārti Latvija',
+        'hero.title.highlight': 'un vārti Latvijā',
         'hero.subtitle': 'Pašu ražošana. 2 gadu garantija. Ātra uzstādīšana.',
         'hero.cta': 'Zvanīt',
         'hero.portfolio': 'Mūsu darbi',
@@ -17,6 +18,13 @@ const translations = {
         'hero.stat1': 'projektu',
         'hero.stat2': 'gadu garantija',
         'hero.stat3': 'atbalsts',
+        // Floating card badges
+        'float.metal': 'Metāls',
+        'float.quality': 'Kvalitatīvi',
+        'float.wood': 'Koks',
+        'float.automation': 'BFT Automātika',
+        'float.color': 'Jebkura krāsa',
+        // Steps section
         'steps.subtitle': 'Process',
         'steps.title': 'Kā mēs strādājam',
         'steps.1.t': 'Izmērīšana',
@@ -27,38 +35,68 @@ const translations = {
         'steps.3.d': 'Profesionāļu komandas uzstādīšana',
         'steps.4.t': 'Nodošana',
         'steps.4.d': 'Kvalitātes kontrole un garantija',
+        // Services section
         'services.subtitle': 'Mūsu piedāvājums',
         'services.title': 'Pakalpojumi',
         'services.link': 'Uzzināt vairāk',
         'services.fences.title': 'Žogi',
-        'services.fences.desc': 'Nerusējošs mētāls, 3D sēta, koks, pēc pasūtījuma',
+        'services.fences.desc': 'Nerūsējošs metāls, 3D siets, koks, pēc pasūtījuma',
+        'services.fences.feature1': 'Nerūsējošs',
+        'services.fences.feature2': '3D siets',
+        'services.fences.feature3': 'Koks',
         'services.gates.title': 'Vārti',
         'services.gates.desc': 'Bīdāmie, veramie un sekciju sistēmas',
+        'services.gates.feature1': 'Bīdāmie',
+        'services.gates.feature2': 'Veramie',
+        'services.gates.feature3': 'Sekciju',
         'services.automation.title': 'Automātika',
         'services.automation.desc': 'Nice, CAME un BFT sistēmas ar garantiju',
-        'services.installation.title': 'Serviss',
-        'services.installation.desc': 'Esošo vārtu remonts un apkope',
+        'services.automation.feature1': 'Nice',
+        'services.automation.feature2': 'CAME',
+        'services.automation.feature3': 'BFT',
+        'services.service.title': 'Serviss',
+        'services.service.desc': 'Esošo vārtu remonts un apkope',
+        'services.service.feature1': 'Remonts',
+        'services.service.feature2': 'Apkope',
+        'services.service.feature3': 'Regulēšana',
+        // Portfolio section
         'portfolio.subtitle': 'Portfelis',
         'portfolio.title': 'Mūsu darbi',
-        'testimonials.subtitle': 'Atsauksmes',
-        'testimonials.title': 'Ko saka mūsu klienti',
-        'testimonial.1.text': 'Lielisks serviss! Vārti uzstādīti 2 dienās, kvalitāte augstā līmenī. Ļoti iesaku!',
-        'testimonial.2.text': 'Profesionāla komanda, skaidra komunikācija. Žogs izskatās lieliski jau 3 gadus.',
-        'testimonial.3.text': 'Ātri, kvalitatīvi un par normālu cenu. Paldies par automātikas ierīkošanu!',
+        'portfolio.filter.all': 'Visi',
+        'portfolio.filter.gates': 'Vārti',
+        'portfolio.filter.fences': 'Žogi',
+        'portfolio.filter.automation': 'Automātika',
+        'portfolio.item1': 'Ekskluzīvie metāla vārti',
+        'portfolio.item2': 'Bīdāmie vārti ar automātiku',
+        'portfolio.item3': 'Metāla vārtiņi pēc pasūtījuma',
+        'portfolio.item4': 'Koka žogs',
+        'portfolio.item5': 'Automātika BFT',
+        'portfolio.item6': 'Automātiskie vārti',
+        // FAQ section
         'faq.subtitle': 'BUJ',
         'faq.title': 'Biežāk uzdotie jautājumi',
         'faq.1.q': 'Cik ilgs laiks nepieciešams žoga uzstādīšanai?',
-        'faq.1.a': 'Standarta žoga uzstādīšana aizņem 1-3 dienas atkarībā no objekta sarežģītības un laikapstākļiem. (plus laiks uz rāžošanu)',
+        'faq.1.a': 'Standarta žoga uzstādīšana aizņem 1-3 dienas atkarībā no objekta sarežģītības un laikapstākļiem. (plus laiks uz ražošanu)',
         'faq.2.q': 'Vai sniedzat garantiju saviem darbiem?',
         'faq.2.a': 'Jā, mēs sniedzam 2 gadu garantiju visiem mūsu uzstādītajiem žogiem un vārtiem.',
         'faq.3.q': 'Vai izmērīšana ir bezmaksas?',
         'faq.3.a': 'Jā, speciālista izbraukums un izmērīšana ir pilnīgi bezmaksas.',
         'faq.4.q': 'Kādus automātikas zīmolus izmantojat?',
         'faq.4.a': 'Mēs strādājam ar vadošajiem zīmoliem - Nice, CAME un BFT.',
+        // Contact form
         'cta.title': 'Nepieciešams profesionāls žogs?',
         'cta.desc': 'Piesakieties bezmaksas izmērīšanai un saņemiet aprēķinu',
+        'form.name': 'Jūsu vārds',
+        'form.email': 'E-pasts',
+        'form.phone': 'Tālrunis',
+        'form.message': 'Jautājums vai piezīme',
+        'form.submit': 'Nosūtīt pieprasījumu',
+        'form.sending': 'Sūtīšana...',
+        'form.success': 'Paldies! Mēs sazināsimies ar jums tuvākajā laikā.',
+        // Cookie consent
         'cookie.text': 'Mēs izmantojam sīkfailus, lai uzlabotu jūsu pieredzi. Turpinot lietot vietni, jūs piekrītat sīkfailu izmantošanai.',
         'cookie.accept': 'Piekrist',
+        // Footer
         'footer.description': 'Uzticami žogi Latvijā kopš 2012. gada. Individuāla pieeja, Eiropas standarti.',
         'footer.contacts.title': 'Kontakti',
         'footer.hours.title': 'Darba laiks',
@@ -71,12 +109,13 @@ const translations = {
         'footer.terms': 'Lietošanas noteikumi'
     },
     ru: {
+        // Navigation
         'nav.home': 'Главная',
         'nav.services': 'Услуги',
         'nav.steps': 'Этапы',
         'nav.portfolio': 'Проекты',
-        'nav.testimonials': 'Отзывы',
         'nav.contact': 'Контакты',
+        // Hero section
         'hero.badge': 'С 2012 года в Латвии',
         'hero.title': 'Надёжные заборы',
         'hero.title.highlight': 'и ворота в Латвии',
@@ -87,6 +126,13 @@ const translations = {
         'hero.stat1': 'проектов',
         'hero.stat2': 'года гарантии',
         'hero.stat3': 'поддержка',
+        // Floating card badges
+        'float.metal': 'Металл',
+        'float.quality': 'Качественно',
+        'float.wood': 'Дерево',
+        'float.automation': 'BFT Автоматика',
+        'float.color': 'Любой цвет',
+        // Steps section
         'steps.subtitle': 'Процесс',
         'steps.title': 'Как мы работаем',
         'steps.1.t': 'Замер',
@@ -97,24 +143,44 @@ const translations = {
         'steps.3.d': 'Установка профессиональной бригадой',
         'steps.4.t': 'Сдача',
         'steps.4.d': 'Контроль качества и гарантия',
+        // Services section
         'services.subtitle': 'Что мы предлагаем',
         'services.title': 'Наши услуги',
         'services.link': 'Подробнее',
         'services.fences.title': 'Заборы',
-        'services.fences.desc': 'Нержавеющий металл, 3D сетка, дерево, под заказ',
+        'services.fences.desc': 'Нержавеющая сталь, 3D сетка, дерево, под заказ',
+        'services.fences.feature1': 'Нержавеющий',
+        'services.fences.feature2': '3D сетка',
+        'services.fences.feature3': 'Дерево',
         'services.gates.title': 'Ворота',
         'services.gates.desc': 'Откатные, распашные и секционные системы',
+        'services.gates.feature1': 'Откатные',
+        'services.gates.feature2': 'Распашные',
+        'services.gates.feature3': 'Секционные',
         'services.automation.title': 'Автоматика',
         'services.automation.desc': 'Системы Nice, CAME и BFT с гарантией',
-        'services.installation.title': 'Сервис',
-        'services.installation.desc': 'Ремонт и обслуживание существующих ворот',
+        'services.automation.feature1': 'Nice',
+        'services.automation.feature2': 'CAME',
+        'services.automation.feature3': 'BFT',
+        'services.service.title': 'Сервис',
+        'services.service.desc': 'Ремонт и обслуживание существующих ворот',
+        'services.service.feature1': 'Ремонт',
+        'services.service.feature2': 'Обслуживание',
+        'services.service.feature3': 'Настройка',
+        // Portfolio section
         'portfolio.subtitle': 'Портфолио',
         'portfolio.title': 'Наши работы',
-        'testimonials.subtitle': 'Отзывы',
-        'testimonials.title': 'Что говорят наши клиенты',
-        'testimonial.1.text': 'Отличный сервис! Ворота установили за 2 дня, качество на высоком уровне. Очень рекомендую!',
-        'testimonial.2.text': 'Профессиональная команда, четкая коммуникация. Забор отлично выглядит уже 3 года.',
-        'testimonial.3.text': 'Быстро, качественно и по нормальной цене. Спасибо за установку автоматики!',
+        'portfolio.filter.all': 'Все',
+        'portfolio.filter.gates': 'Ворота',
+        'portfolio.filter.fences': 'Заборы',
+        'portfolio.filter.automation': 'Автоматика',
+        'portfolio.item1': 'Эксклюзивные металлические ворота',
+        'portfolio.item2': 'Откатные ворота с автоматикой',
+        'portfolio.item3': 'Металлические калитки на заказ',
+        'portfolio.item4': 'Деревянный забор',
+        'portfolio.item5': 'Автоматика BFT',
+        'portfolio.item6': 'Автоматические ворота',
+        // FAQ section
         'faq.subtitle': 'FAQ',
         'faq.title': 'Часто задаваемые вопросы',
         'faq.1.q': 'Сколько времени занимает установка забора?',
@@ -125,10 +191,20 @@ const translations = {
         'faq.3.a': 'Да, выезд специалиста и замер полностью бесплатны.',
         'faq.4.q': 'Какие бренды автоматики вы используете?',
         'faq.4.a': 'Мы работаем с ведущими брендами - Nice, CAME и BFT.',
+        // Contact form
         'cta.title': 'Нужен профессиональный забор?',
         'cta.desc': 'Оставьте заявку на бесплатный замер и получите расчет',
+        'form.name': 'Ваше имя',
+        'form.email': 'Эл. почта',
+        'form.phone': 'Телефон',
+        'form.message': 'Вопрос или примечание',
+        'form.submit': 'Отправить запрос',
+        'form.sending': 'Отправка...',
+        'form.success': 'Спасибо! Мы свяжемся с вами в ближайшее время.',
+        // Cookie consent
         'cookie.text': 'Мы используем файлы cookie для улучшения вашего опыта. Продолжая использовать сайт, вы соглашаетесь с использованием cookie.',
         'cookie.accept': 'Согласиться',
+        // Footer
         'footer.description': 'Надёжные ограждения в Латвии с 2012 года. Индивидуальный подход, европейские стандарты.',
         'footer.contacts.title': 'Контакты',
         'footer.hours.title': 'Часы работы',
@@ -141,12 +217,13 @@ const translations = {
         'footer.terms': 'Условия использования'
     },
     en: {
+        // Navigation
         'nav.home': 'Home',
         'nav.services': 'Services',
         'nav.steps': 'Process',
         'nav.portfolio': 'Portfolio',
-        'nav.testimonials': 'Testimonials',
         'nav.contact': 'Contact',
+        // Hero section
         'hero.badge': 'Since 2012 in Latvia',
         'hero.title': 'Reliable fences',
         'hero.title.highlight': 'and gates in Latvia',
@@ -157,6 +234,13 @@ const translations = {
         'hero.stat1': 'projects',
         'hero.stat2': 'years warranty',
         'hero.stat3': 'support',
+        // Floating card badges
+        'float.metal': 'Metal',
+        'float.quality': 'Quality',
+        'float.wood': 'Wood',
+        'float.automation': 'BFT Automation',
+        'float.color': 'Any color',
+        // Steps section
         'steps.subtitle': 'Process',
         'steps.title': 'How we work',
         'steps.1.t': 'Measurement',
@@ -167,24 +251,44 @@ const translations = {
         'steps.3.d': 'Professional team installation',
         'steps.4.t': 'Handover',
         'steps.4.d': 'Quality control & warranty',
+        // Services section
         'services.subtitle': 'What we offer',
         'services.title': 'Our services',
         'services.link': 'Learn more',
         'services.fences.title': 'Fences',
         'services.fences.desc': 'Stainless steel, 3D mesh, wood, custom designs',
+        'services.fences.feature1': 'Stainless',
+        'services.fences.feature2': '3D mesh',
+        'services.fences.feature3': 'Wood',
         'services.gates.title': 'Gates',
         'services.gates.desc': 'Sliding, swinging and sectional systems',
+        'services.gates.feature1': 'Sliding',
+        'services.gates.feature2': 'Swinging',
+        'services.gates.feature3': 'Sectional',
         'services.automation.title': 'Automation',
         'services.automation.desc': 'Nice, CAME and BFT systems with warranty',
-        'services.installation.title': 'Service',
-        'services.installation.desc': 'Repair and maintenance of existing gates',
+        'services.automation.feature1': 'Nice',
+        'services.automation.feature2': 'CAME',
+        'services.automation.feature3': 'BFT',
+        'services.service.title': 'Service',
+        'services.service.desc': 'Repair and maintenance of existing gates',
+        'services.service.feature1': 'Repair',
+        'services.service.feature2': 'Maintenance',
+        'services.service.feature3': 'Adjustment',
+        // Portfolio section
         'portfolio.subtitle': 'Portfolio',
         'portfolio.title': 'Our projects',
-        'testimonials.subtitle': 'Testimonials',
-        'testimonials.title': 'What our clients say',
-        'testimonial.1.text': 'Great service! Gates installed in 2 days, quality is top notch. Highly recommend!',
-        'testimonial.2.text': 'Professional team, clear communication. The fence looks great for 3 years now.',
-        'testimonial.3.text': 'Fast, quality work at a fair price. Thanks for the automation installation!',
+        'portfolio.filter.all': 'All',
+        'portfolio.filter.gates': 'Gates',
+        'portfolio.filter.fences': 'Fences',
+        'portfolio.filter.automation': 'Automation',
+        'portfolio.item1': 'Exclusive metal gates',
+        'portfolio.item2': 'Sliding gates with automation',
+        'portfolio.item3': 'Custom metal wickets',
+        'portfolio.item4': 'Wooden fence',
+        'portfolio.item5': 'BFT Automation',
+        'portfolio.item6': 'Automatic gates',
+        // FAQ section
         'faq.subtitle': 'FAQ',
         'faq.title': 'Frequently asked questions',
         'faq.1.q': 'How long does fence installation take?',
@@ -195,10 +299,20 @@ const translations = {
         'faq.3.a': 'Yes, site visit and measurement are completely free.',
         'faq.4.q': 'What automation brands do you use?',
         'faq.4.a': 'We work with leading brands - Nice, CAME and BFT.',
+        // Contact form
         'cta.title': 'Need a professional fence?',
         'cta.desc': 'Request free measurement and get estimate',
+        'form.name': 'Your name',
+        'form.email': 'Email',
+        'form.phone': 'Phone',
+        'form.message': 'Question or note',
+        'form.submit': 'Send request',
+        'form.sending': 'Sending...',
+        'form.success': 'Thank you! We will contact you shortly.',
+        // Cookie consent
         'cookie.text': 'We use cookies to improve your experience. By continuing to use the site, you agree to cookie usage.',
         'cookie.accept': 'Accept',
+        // Footer
         'footer.description': 'Reliable fencing in Latvia since 2012. Individual approach, European standards.',
         'footer.contacts.title': 'Contacts',
         'footer.hours.title': 'Working hours',
@@ -274,7 +388,7 @@ function closeMobileMenu() {
 
 // ==================== SCROLL ANIMATIONS ====================
 function handleScrollAnimations() {
-    const elements = document.querySelectorAll('.step-card, .service-card, .gallery-item, .testimonial-card, .faq-item, .contact-card');
+    const elements = document.querySelectorAll('.step-card, .service-card, .gallery-item, .faq-item, .contact-card');
     
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
@@ -288,7 +402,7 @@ function handleScrollAnimations() {
 }
 
 function initAnimations() {
-    const elements = document.querySelectorAll('.step-card, .service-card, .gallery-item, .testimonial-card, .faq-item, .contact-card');
+    const elements = document.querySelectorAll('.step-card, .service-card, .gallery-item, .faq-item, .contact-card');
     elements.forEach(element => {
         element.style.opacity = '0';
         element.style.transform = 'translateY(30px)';
@@ -434,14 +548,13 @@ function initContactForm() {
         const phone = document.getElementById('contactPhone').value;
         const message = document.getElementById('contactMessage').value;
         
-        // Simulate form submission (replace with actual API endpoint)
         formStatus.className = 'form-status';
-        formStatus.textContent = 'Sūtīšana...';
+        formStatus.textContent = translations[currentLang]['form.sending'] || 'Sending...';
         formStatus.style.display = 'block';
         
         setTimeout(() => {
             formStatus.className = 'form-status success';
-            formStatus.textContent = 'Paldies! Mēs sazināsimies ar jums tuvākajā laikā.';
+            formStatus.textContent = translations[currentLang]['form.success'] || 'Thank you! We will contact you shortly.';
             form.reset();
             
             setTimeout(() => {
