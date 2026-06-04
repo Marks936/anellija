@@ -103,7 +103,7 @@ const translations = {
         'footer.hours.weekdays': 'P-Pk:',
         'footer.hours.saturday': 'S:',
         'footer.hours.sunday': 'Sv:',
-        'footer.hours.sunday.value': 'pēc pieraksta',
+        'footer.hours.sunday.value': 'Brīvdiena',
         'footer.rights': 'Visas tiesības aizsargātas',
         'footer.privacy': 'Privātuma politika',
         'footer.terms': 'Lietošanas noteikumi'
@@ -211,7 +211,7 @@ const translations = {
         'footer.hours.weekdays': 'Пн-Пт:',
         'footer.hours.saturday': 'Сб:',
         'footer.hours.sunday': 'Вс:',
-        'footer.hours.sunday.value': 'по записи',
+        'footer.hours.sunday.value': 'Выходной',
         'footer.rights': 'Все права защищены',
         'footer.privacy': 'Политика конфиденциальности',
         'footer.terms': 'Условия использования'
@@ -319,7 +319,7 @@ const translations = {
         'footer.hours.weekdays': 'Mon-Fri:',
         'footer.hours.saturday': 'Sat:',
         'footer.hours.sunday': 'Sun:',
-        'footer.hours.sunday.value': 'by appointment',
+        'footer.hours.sunday.value': 'Closed',
         'footer.rights': 'All rights reserved',
         'footer.privacy': 'Privacy policy',
         'footer.terms': 'Terms of use'
@@ -341,9 +341,9 @@ function applyTranslations() {
             }
         }
     });
-    document.title = currentLang === 'lv' ? 'Anellija | Vārti un žogi Rīgā - Profesionāli risinājumi' :
-                     currentLang === 'ru' ? 'Anellija | Ворота и заборы в Риге - Профессиональные решения' :
-                     'Anellija | Gates and Fences in Latvia - Professional Solutions';
+    document.title = currentLang === 'lv' ? 'Vārtu Pasaule | Profesionāli žogi un vārti Latvijā' :
+                     currentLang === 'ru' ? 'Vārtu Pasaule | Профессиональные заборы и ворота в Латвии' :
+                     'Vārtu Pasaule | Professional fences and gates in Latvia';
 }
 
 // Change language
